@@ -1,0 +1,100 @@
+
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+ background: url("https://wallpapers.com/images/featured/calculator-background-9idet8pma9adeqd5.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  padding:20px;
+}
+
+/* ===== Calculator Box ===== */
+.calculator-container {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  max-width: 380px;
+  width:100%;
+}
+
+/* ===== Header ===== */
+.calculator-header { text-align:center; margin-bottom:20px; }
+.calculator-header h1 {
+  font-size:2em; font-weight:700; 
+  background: linear-gradient(135deg, #00f5ff, #ff00ff, #ffd700);
+  -webkit-background-clip:text; 
+  -webkit-text-fill-color:transparent;
+}
+
+/* ===== Display ===== */
+.display {
+  background: rgba(0,0,0,0.6);
+  border-radius: 15px;
+  padding: 18px;
+  margin-bottom: 18px;
+  border:1px solid rgba(255,255,255,0.15);
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.6);
+}
+.display-expression { color: #bbb; font-size: 1em; text-align:right; min-height:24px; }
+.display-result { color:#fff; font-size:2em; text-align:right; min-height:50px; }
+
+/* ===== Buttons Grid ===== */
+.buttons {
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:10px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  border:none;
+  border-radius:12px;
+  font-size:1.1em;
+  font-weight:600;
+  height:55px;   /* smaller buttons */
+  cursor:pointer;
+  transition: all 0.2s ease;
+  color:white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+}
+
+/* Hover effect */
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* ===== Button Colors ===== */
+.btn-clear {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.btn-operator {
+  background: linear-gradient(135deg, #0078ff, #00c6ff);
+}
+
+.btn-equals {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  grid-column: span 2;
+}
+
+.btn-zero { grid-column: span 2; }
+
+.btn {
+  background: linear-gradient(135deg, #434343, #2c2c2c);
+}
+
+.btn-extra { /* for functions like sqrt, square */
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color:#222;
+  font-weight:700;
+}
+

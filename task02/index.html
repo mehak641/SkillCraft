@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator Pro</title>
+
+  
+</head>
+<body>
+  <div class="calculator-container">
+    <div class="calculator-header">
+      <h1>CALCULATOR</h1>
+    </div>
+
+    <div class="display">
+      <div class="display-expression" id="expression">Ready</div>
+      <div class="display-result" id="result">0</div>
+    </div>
+
+    <div class="buttons">
+      <button class="btn btn-clear" onclick="clearAll()">AC</button>
+      <button class="btn btn-clear" onclick="clearEntry()">CE</button>
+      <button class="btn btn-operator" onclick="appendToDisplay('%')">%</button>
+      <button class="btn btn-operator" onclick="appendToDisplay('/')">÷</button>
+      <button class="btn" onclick="appendToDisplay('7')">7</button>
+      <button class="btn" onclick="appendToDisplay('8')">8</button>
+      <button class="btn" onclick="appendToDisplay('9')">9</button>
+      <button class="btn btn-operator" onclick="appendToDisplay('*')">×</button>
+      <button class="btn" onclick="appendToDisplay('4')">4</button>
+      <button class="btn" onclick="appendToDisplay('5')">5</button>
+      <button class="btn" onclick="appendToDisplay('6')">6</button>
+      <button class="btn btn-operator" onclick="appendToDisplay('-')">−</button>
+      <button class="btn" onclick="appendToDisplay('1')">1</button>
+      <button class="btn" onclick="appendToDisplay('2')">2</button>
+      <button class="btn" onclick="appendToDisplay('3')">3</button>
+      <button class="btn btn-operator" onclick="appendToDisplay('+')">+</button>
+      <button class="btn btn-zero" onclick="appendToDisplay('0')">0</button>
+      <button class="btn" onclick="appendToDisplay('.')">•</button>
+     <button class="btn" onclick="backspace()">⌫</button>
+
+      <button class="btn btn-equals" onclick="calculate()">=</button>
+      <button class="btn" onclick="square()">x²</button>
+      <button class="btn" onclick="sqrt()">√</button>
+      <button class="btn" onclick="reciprocal()">1/x</button>
+    </div>
+
+    <div class="history">
+      <h3>History</h3>
+      <div id="history-list"></div>
+    </div>
+  </div>
+
+</body>
+</html>
